@@ -1,17 +1,24 @@
 package workshop03;
 
+import java.util.Scanner;
+
 public class Test13 {
 
 	public static void main(String[] args) {
-		// 반복문을 사용하여 실행결과와 같이 출력되도록 코드를 구현하시오
+		// Scanner 클래스를 사용하여 키보드로 2자리의 양의 정수값을 입력 받아서 출력하는 실습. 단 2자리 양의 정수가 아니면 다시 입력 받는다.
 
-		System.out.println("----- 곱셈표 -----");
+		Scanner scan = new Scanner(System.in);
+		int no;
 
-		for (int i = 1; i <= 9; i++) {
-			for (int j = 1; j <= 9; j++)
-				System.out.printf("%3d", i * j);
-			System.out.println();
-		}
+		System.out.println("2자리의 정수를 입력하세요.");
+
+		do {
+			System.out.print("입력：");
+			no = scan.nextInt();
+		} while (no < 10 || no > 99);
+
+		System.out.println("입력값은 " + no );
+		
 	}
 
 }
